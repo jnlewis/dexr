@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7197AFF6-67FA-42A6-9334-FBBA117C7036}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DEXR.Core</RootNamespace>
+    <AssemblyName>DEXR.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.2\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.6\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationState.cs" />
+    <Compile Include="Blockchain.cs" />
+    <Compile Include="Configuration\ConstantConfig.cs" />
+    <Compile Include="Consensus\ListMerge.cs" />
+    <Compile Include="Consensus\ProofOfStake.cs" />
+    <Compile Include="Const\ReservedAddresses.cs" />
+    <Compile Include="Const\ServerStates.cs" />
+    <Compile Include="Const\ResponseCodes.cs" />
+    <Compile Include="Const\ResponseMessages.cs" />
+    <Compile Include="Const\TradePartialFull.cs" />
+    <Compile Include="Const\ConsensusStates.cs" />
+    <Compile Include="Const\TradeSides.cs" />
+    <Compile Include="Controller\TransactionController.cs" />
+    <Compile Include="Controller\ConsensusController.cs" />
+    <Compile Include="Controller\ControllerBase.cs" />
+    <Compile Include="Controller\GenericController.cs" />
+    <Compile Include="Controller\ViewerController.cs" />
+    <Compile Include="Cryptography\Base58Encoding.cs" />
+    <Compile Include="Cryptography\CurveFp.cs" />
+    <Compile Include="Cryptography\KeySignature.cs" />
+    <Compile Include="Cryptography\Point.cs" />
+    <Compile Include="Cryptography\PublicPrivateKeyPair.cs" />
+    <Compile Include="Data\Index\Index.cs" />
+    <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Model\Block\TransactionOrderMarket.cs" />
+    <Compile Include="Model\Block\TransactionOrderMatch.cs" />
+    <Compile Include="Model\Block\TransactionOrderCancel.cs" />
+    <Compile Include="Model\Block\TransactionOrderLimit.cs" />
+    <Compile Include="Data\Index\IndexOwner.cs" />
+    <Compile Include="Data\Index\IndexOrder.cs" />
+    <Compile Include="Model\Block\TransactionBlockFee.cs" />
+    <Compile Include="Model\NodeChainHeight.cs" />
+    <Compile Include="Model\Requests\TransactionCancelOrderRequest.cs" />
+    <Compile Include="Utility\MerkleTree.cs" />
+    <Compile Include="Model\Node.cs" />
+    <Compile Include="Model\Requests\TransactionOrderMarketRequest.cs" />
+    <Compile Include="Model\Requests\TransactionOrderLimitRequest.cs" />
+    <Compile Include="Model\Requests\TransactionTransferRequest.cs" />
+    <Compile Include="Model\Requests\TransactionCreateTokenRequest.cs" />
+    <Compile Include="Model\Requests\SignRequest.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\Requests\ViewBlocksRequest.cs" />
+    <Compile Include="Model\Requests\ViewOrdersRequest.cs" />
+    <Compile Include="Model\TradeMatch.cs" />
+    <Compile Include="Model\WalletAddress.cs" />
+    <Compile Include="Networking\ApiControllerBase.cs" />
+    <Compile Include="Model\Requests\ViewWalletRequest.cs" />
+    <Compile Include="Model\GenericResponse.cs" />
+    <Compile Include="Networking\ApiClient.cs" />
+    <Compile Include="Model\Requests\AnnounceNewBlockRequest.cs" />
+    <Compile Include="Model\Requests\AnnounceRegisterNodeRequest.cs" />
+    <Compile Include="Services\IndexServices.cs" />
+    <Compile Include="Model\Block\Block.cs" />
+    <Compile Include="Model\Block\TransactionToken.cs" />
+    <Compile Include="Model\Block\TransactionTransfer.cs" />
+    <Compile Include="Configuration\NewChainSetup.cs" />
+    <Compile Include="Configuration\ProtocolConfiguration.cs" />
+    <Compile Include="Configuration\Settings.cs" />
+    <Compile Include="Controller\BlockchainController.cs" />
+    <Compile Include="Data\DBClient.cs" />
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\DBKeyPrefix.cs" />
+    <Compile Include="Data\Index\IndexToken.cs" />
+    <Compile Include="Data\Index\IndexBalance.cs" />
+    <Compile Include="ApplicationLog.cs" />
+    <Compile Include="Networking\ApiController.cs" />
+    <Compile Include="Networking\ApiRoutes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="Services\DataServices.cs" />
+    <Compile Include="Services\ServicesBase.cs" />
+    <Compile Include="Services\TradeServices.cs" />
+    <Compile Include="Services\TransactionServices.cs" />
+    <Compile Include="Services\ConsensusServices.cs" />
+    <Compile Include="Services\ViewerServices.cs" />
+    <Compile Include="Utility\DateTimeUtility.cs" />
+    <Compile Include="Utility\HashUtility.cs" />
+    <Compile Include="Utility\NetworkUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMeTestScenario.txt" />
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DEXR.HttpServer\DEXR.HttpServer.csproj">
+      <Project>{fe91b162-ede2-4fb1-adfd-cd4b6315afbf}</Project>
+      <Name>DEXR.HttpServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LevelDB.NET\LevelDB.NET.csproj">
+      <Project>{c8f8b318-15fe-4501-bd0c-abc71d54bb6a}</Project>
+      <Name>LevelDB.NET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+{
+  "ChainFolderName": "Chain",
+  "ServerHostType": "localhost",
+  "ServerPort": 8080,
+  "SeedList": [
+    "http://localhost:8080"
+  ],
+  "System": {
+    "MemCacheSizeMB" : 1024 
+  }
+}
