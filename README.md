@@ -15,17 +15,17 @@ This project is currently a working prototype and is not a production ready prod
 * **Blockchain Security**: Signature verification, duplicate message handling, pre-commit transactions cross-referencing.
 
 # Technologies & System Specification
-Supported OS: Windows, Linux, OSX
-Language: C#
-Framework: .NET Core 2.0
-Block Interval (Confirmation Time): 15 seconds
+* Supported OS: Windows, Linux, OSX
+* Language: C#
+* Framework: .NET Core 2.0
+* Block Interval (Confirmation Time): 15 seconds
 
 # Web API
-Dexr’s built-in web API server readily enables integration with external party applications. Any application that can send an HTTP request can programmatically access the platform with ease. All transactions sent to the network are transmitted through the web API.
+Dexr's built-in web API server readily enables integration with external party applications. Any application that can send an HTTP request can programmatically access the platform with ease. All transactions sent to the network are transmitted through the web API.
 
 # Getting Started
-To get started, see the Getting Started guide to set up a Command Line Interface (CLI) node on your machine. Once you have set up your node successfully, you may then send requests to the applications built in API to interact with the blockchain.
-For the complete API documentation, please see Dexr API Documentation.
+To get started, see the [Getting Started guide](https://github.com/jnlewis/dexr/blob/master/Dexr%20-%20Getting%20Started.pdf) to set up a Command Line Interface (CLI) node on your machine. Once you have set up your node successfully, you may then send requests to the applications built in API to interact with the blockchain.
+For the complete API documentation, please see [Dexr API Documentation](https://documenter.getpostman.com/view/469639/dexr-api/RWEmKcUy).
 
 # Consensus Protocol
 The consensus protocol employed in Dexr is Proof-of-Stake (PoS) with Delegated Byzantine Fault Tolerant (dBFT) algorithm, which has been proven competitive in performance and reliability in many existing blockchain platforms today such as Neo, Dash and Ethereum’s Casper. In dBFT algorithms, a speaker node is selected from the network to be responsible for new block creation.
@@ -37,7 +37,7 @@ Dexr further enhances this mechanism by leveraging on asynchronous message trans
 ### Network Flow
  
 Figure: Dexr Network Flow
-In dBFT algorithms, a speaker is voted in as a delegate to create and propose new blocks for the network. In Dexr, the “Select Speaker” stage does not involve any network overheads or exchange of messages between nodes. 
+In dBFT algorithms, a speaker is voted in as a delegate to create and propose new blocks for the network. In Dexr, the "Select Speaker" stage does not involve any network overheads or exchange of messages between nodes. 
 
 ### Proof-of-Stake
 In each epoch, every node on the network runs a selection algorithm locally which produces a common speaker based on Proof-of-Stake and block index. As each node will come to the same conclusion, there is no need for inter-communication. As with Proof-of-Stake protocols, nodes which has a higher stake (native token balance) will have more occurrence to getting selected as speaker.
