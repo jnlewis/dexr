@@ -1,5 +1,5 @@
 # Introduction
-Dexr is an open-source decentralized cryptocurrency exchange platform developed on a uniquely designed blockchain protocol. The project’s goal is to enable high throughput, fast commit of transactions, while also enabling programmable integration with 3rd party applications. 
+Dexr is an open-source decentralized cryptocurrency exchange platform developed on a uniquely designed blockchain protocol. The project's goal is to enable high throughput, fast commit of transactions, while also enabling programmable integration with 3rd party applications. 
 
 This project is currently a working prototype and is not a production ready product. See production readiness section for details.
 
@@ -35,8 +35,10 @@ Dexr further enhances this mechanism by leveraging on asynchronous message trans
 * A non-voting speaker selection allows for lower network overhead by eliminating the voting process which requires transmission involving all nodes.
 
 ### Network Flow
- 
+
+![Figure: Dexr Network Flow](http://anno.network/docs/dexr-network-flow.jpg)
 Figure: Dexr Network Flow
+
 In dBFT algorithms, a speaker is voted in as a delegate to create and propose new blocks for the network. In Dexr, the "Select Speaker" stage does not involve any network overheads or exchange of messages between nodes. 
 
 ### Proof-of-Stake
@@ -46,6 +48,7 @@ In Dexr, Proof-of-Stake is linear where a node with 100 token balance will have 
 
 ### Consensus Lifecycle
 
+![Figure: Dexr Consensus Lifecycle](http://anno.network/docs/dexr-consensus-lifecycle.jpg)
 Figure: Dexr Consensus Lifecycle
 
 
@@ -78,5 +81,5 @@ Block synchronization should also be improved upon by allowing block downloads f
 Future enhancement can also look into the use of Honey Badger BFT's  (https://eprint.iacr.org/2016/199.pdf) network subset protocol to improve transactions relay to all nodes on the network. This may allow for better scalability of consensus nodes, as currently when any node receives a transaction, it has to broadcast to each and every other node on the network.
 
 # Conclusion
-Dexr’s unique use of proof-of-stake protocol and delegated byzantine fault tolerant algorithm allows for improved transaction throughput and reduced network overhead. This performance enhancement affords a strong foundation for a reliable decentralized cryptocurrency exchange platform.
+Dexr's unique use of proof-of-stake protocol and delegated byzantine fault tolerant algorithm allows for improved transaction throughput and reduced network overhead. This performance enhancement affords a strong foundation for a reliable decentralized cryptocurrency exchange platform.
 
