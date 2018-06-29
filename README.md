@@ -73,6 +73,8 @@ The minimum fee for each block is adjusted based on the number of transactions f
 # Production Readiness
 The project at its current stage is a working prototype with most of its intended features implemented. However, there are still several areas of improvement before it can be ready to serve in a production environment.
 
+Linux and MacOS support would be available once the project is converted to .NET Core 2.0.
+
 Code restructuring is one area to be looked into, in particular the consensus protocol and order matching engine can be further abstracted and detached from the core libraries to improve maintainability and to aid developers in understanding the code structure.
 
 Block synchronization should also be improved upon by allowing block downloads from multiple nodes in parallel.
