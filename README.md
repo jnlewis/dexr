@@ -37,7 +37,7 @@ Dexr further enhances this mechanism by leveraging on asynchronous message trans
 ### Network Flow
 
 ![Figure: Dexr Network Flow](http://anno.network/docs/dexr-network-flow.jpg)
-Figure: Dexr Network Flow
+
 
 In dBFT algorithms, a speaker is voted in as a delegate to create and propose new blocks for the network. In Dexr, the "Select Speaker" stage does not involve any network overheads or exchange of messages between nodes. 
 
@@ -49,7 +49,6 @@ In Dexr, Proof-of-Stake is linear where a node with 100 token balance will have 
 ### Consensus Lifecycle
 
 ![Figure: Dexr Consensus Lifecycle](http://anno.network/docs/dexr-consensus-lifecycle.jpg)
-Figure: Dexr Consensus Lifecycle
 
 
 # Architecture
