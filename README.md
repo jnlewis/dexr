@@ -4,31 +4,33 @@ Dexr is an open-source decentralized cryptocurrency exchange platform developed 
 This project is currently a working prototype and is not a production ready product. See production readiness section for details.
 
 # Features
-* **Token Creation**: Enables creation of new tokens on the blockchain.
-* **Token Transfer**: Enables transfer of tokens between addresses (public keys) on the blockchain.
-* **Limit Orders**: Enables placing limit orders for any token pairs in the order book. 
-* **Market Orders**: Enables placing market orders for any token pairs.
+* **Token Creation**: Creation of new tokens on the blockchain.
+* **Token Transfer**: Transfer of tokens between addresses (public keys) on the blockchain.
+* **Limit Orders**: Placing limit orders for any token pairs in the order book. 
+* **Market Orders**: Placing market orders for any token pairs.
 * **Order Cancellation**: Allows the owner of an order to cancel an existing order in the order book.
 * **On-chain Order Matching**: The matching engine is built-in on the blockchain that ensures true decentralization and data immutability.
-* **Adaptive Network Fees**: Enables network fees that automatically scale to the load of the network.
+* **Adaptive Network Fees**: Network fees that automatically scale to the load of the network.
 * **Query Indexing**: Allows querying directly on the blockchain for indexed information including wallet balances, token information, and order books.
 * **Blockchain Security**: Signature verification, duplicate message handling, pre-commit transactions cross-referencing.
 
 # Technologies & System Specification
-* Supported OS: Windows, Linux, OSX
+* Supported OS: Windows
 * Language: C#
-* Framework: .NET Core 2.0
+* Framework: .NET Framework 4.6
 * Block Interval (Confirmation Time): 15 seconds
 
+Note: Linux and MacOS support to be added with upgrade to .NET Core 2.0
+
 # Web API
-Dexr's built-in web API server readily enables integration with external party applications. Any application that can send an HTTP request can programmatically access the platform with ease. All transactions sent to the network are transmitted through the web API.
+Dexr's built-in web API server readily enables integration with external applications. Any application that can send an HTTP request can programmatically interact with the platform. All transactions sent to the network are transmitted through the web API.
 
 # Getting Started
-To get started, see the [Getting Started guide](https://github.com/jnlewis/dexr/blob/master/Dexr%20-%20Getting%20Started.pdf) to set up a Command Line Interface (CLI) node on your machine. Once you have set up your node successfully, you may then send requests to the applications built in API to interact with the blockchain.
+To get started, see the [Getting Started guide](https://github.com/jnlewis/dexr/blob/master/Dexr%20-%20Getting%20Started.pdf) to set up a Command Line Interface (CLI) node on your machine. Once you have set up your node successfully, you may then send requests to the application's built-in API to interact with the blockchain.
 For the complete API documentation, please see [Dexr API Documentation](https://documenter.getpostman.com/view/469639/dexr-api/RWEmKcUy).
 
 # Consensus Protocol
-The consensus protocol employed in Dexr is Proof-of-Stake (PoS) with Delegated Byzantine Fault Tolerant (dBFT) algorithm, which has been proven competitive in performance and reliability in many existing blockchain platforms today such as Neo, Dash and Ethereum’s Casper. In dBFT algorithms, a speaker node is selected from the network to be responsible for new block creation.
+The consensus protocol employed in Dexr is Proof-of-Stake (PoS) with Delegated Byzantine Fault Tolerant (dBFT) algorithm, which has been proven competitive in performance and reliability in many existing blockchain platforms today such as Neo and Dash. In dBFT algorithms, a speaker node is selected from the network to be responsible for new block creation.
 
 Dexr further enhances this mechanism by leveraging on asynchronous message transmission and non-voting speaker selection. 
 * Asynchronous communication eliminates the need to maintain active connections between network nodes. This mechanism also removes the static timer usually required to keep track of block creation intervals. 
