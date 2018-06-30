@@ -77,9 +77,11 @@ The project at its current stage is a working prototype with most of its intende
 
 Linux and MacOS support would be available once the project is converted to .NET Core 2.0.
 
-Code restructuring is one area to be looked into, in particular the consensus protocol and order matching engine can be further abstracted and detached from the core libraries to improve maintainability and to aid developers in understanding the code structure.
+Code restructuring is one area to be looked into, in particular the consensus protocol and order matching engine can be further abstracted and detached from the core libraries to improve maintainability and to aid developers in understanding the architecture.
 
 Block synchronization should also be improved upon by allowing block downloads from multiple nodes in parallel.
+
+More robust feature including FoK and IoC orders, and ICO.
 
 Future enhancement can also look into the use of Honey Badger BFT's  (https://eprint.iacr.org/2016/199.pdf) network subset protocol to improve transactions relay to all nodes on the network. This may allow for better scalability of consensus nodes, as currently when any node receives a transaction, it has to broadcast to each and every other node on the network.
 
