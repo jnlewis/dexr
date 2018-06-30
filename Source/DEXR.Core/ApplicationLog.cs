@@ -54,7 +54,7 @@ namespace DEXR.Core
             while(innerEx != null)
             {
                 Error("InnerException:" + innerEx.Message, methodName);
-                innerEx = ex.InnerException;
+                innerEx = innerEx.InnerException;
             }
         }
     }
