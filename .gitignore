@@ -1,0 +1,12 @@
+/Source/.vs
+/Source/DEXR.CLI/bin
+/Source/DEXR.CLI/obj
+/Source/DEXR.Core/bin
+/Source/DEXR.Core/obj
+/Source/DEXR.HttpServer/bin
+/Source/DEXR.HttpServer/obj
+/Source/DEXR.UnitTest/bin
+/Source/DEXR.UnitTest/obj
+/Source/LevelDB.NET/bin
+/Source/LevelDB.NET/obj
+/Source/packages
