@@ -50,7 +50,7 @@ In Dexr, Proof-of-Stake is linear where a node with 100 token balance will have 
 
 ### Consensus Lifecycle
 
-![Figure: Dexr Consensus Lifecycle](https://raw.githubusercontent.com/jnlewis/dexr/master/Docs/dexr-consensus-lifecycle.png)
+![Figure: Dexr Consensus Lifecycle](https://raw.githubusercontent.com/jnlewis/dexr/master/Docs/dexr-consensus-lifecycle-2.png)
 
 
 # Architecture
